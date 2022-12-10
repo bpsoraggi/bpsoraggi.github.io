@@ -16,13 +16,13 @@ $(document).ready(function () {
     });
 
     var typed = new Typed(".typing", {
-        strings: ["Student", "Programmer", "Designer", "Freelancer"],
+        strings: ["Aluna", "Programadora", "Designer", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
     var typed = new Typed(".typing-2", {
-        strings: ["Student", "Programmer", "Designer", "Freelancer"],
+        strings: ["Aluna", "Programadora", "Designer", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -55,6 +55,9 @@ $(document).ready(function () {
 });
 
 function sendEmail() {
+    var element = document.querySelector("form");
+    event.preventDefault();
+
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -62,8 +65,8 @@ function sendEmail() {
         message: document.getElementById("text").value,
     }
 
-    const serviceID = "service_1yhaoel";
-    const templateID = "template_jmdvfqc"
+    const serviceID = "service_e5apj1k";
+    const templateID = "template_d2t2ngs"
 
     emailjs.send(serviceID, templateID, params).then(
         res => {
